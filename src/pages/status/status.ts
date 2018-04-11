@@ -17,8 +17,9 @@ import {Storage} from '@ionic/storage';
   templateUrl: 'status.html',
 })
 export class StatusPage {
-
+//variable 
   myStatus:string;
+  //import storage
   constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage) {
   }
 
@@ -26,7 +27,7 @@ export class StatusPage {
     console.log('ionViewDidLoad StatusPage');
   }
 
-
+//function 
   saveStatus(){
     console.log(this.myStatus);
     this.storage.set("Status",this.myStatus);

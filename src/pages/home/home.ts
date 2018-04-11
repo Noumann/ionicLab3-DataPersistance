@@ -18,9 +18,9 @@ import {Storage} from '@ionic/storage';
 })
 export class HomePage {
 
-//new 
+//new  data type
 Status:string;
-
+//import storage here
   constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage) {
   }
 
@@ -31,7 +31,7 @@ Status:string;
   openStatus(){
     this.navCtrl.push("StatusPage")
   }
-
+//new Function
   ionViewWillEnter(){
     this.storage.get("Status").then((data)=>{
       this.Status=data;
